@@ -15,12 +15,14 @@ const generalLimiter = rateLimit({
   },
 });
 
+const { AUTH_LIMIT_MAX } = require('../config/env');
+
 /**
- * Auth rate limiter: 10 requests per 15-minute window.
+ * Auth rate limiter: configurable attempts per 15-minute window.
  */
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 10,
+  max: AUTH_LIMIT_MAX,
   standardHeaders: true,
   legacyHeaders: false,
   message: {

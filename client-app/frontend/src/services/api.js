@@ -14,7 +14,8 @@ const api = axios.create({
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401) {
+    const isGuestPath = window.location.pathname.includes('/login') || window.location.pathname.includes('/register');
+    if (error.response?.status === 401 && !isGuestPath) {
       // Clear any local state and redirect
       window.location.href = '/login';
     }

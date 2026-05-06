@@ -11,4 +11,5 @@ module.exports = {
   CLIENT_ORIGIN: process.env.CLIENT_ORIGIN || 'http://localhost:5173',
   NODE_ENV: process.env.NODE_ENV || 'development',
   LOW_BALANCE_THRESHOLD: parseInt(process.env.LOW_BALANCE_THRESHOLD, 10) || 5000,
+  AUTH_LIMIT_MAX: parseInt(process.env.AUTH_LIMIT_MAX, 10) || 30,
 };
