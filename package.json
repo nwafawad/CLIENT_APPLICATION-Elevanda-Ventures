@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/nwafawad/PRACTICAL_TEST_-Elevanda-Ventures/issues"
   },
-  "homepage": "https://github.com/nwafawad/PRACTICAL_TEST_-Elevanda-Ventures#readme"
+  "homepage": "https://github.com/nwafawad/PRACTICAL_TEST_-Elevanda-Ventures#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
